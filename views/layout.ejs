@@ -4,7 +4,15 @@
     <head>
         <title>Quiz</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="/public/stylesheets/style.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+        <link rel="stylesheet"
+              type="text/css"
+              media="only screen and (min-width: 530px) and (min-device-width: 481px)"
+              href="/stylesheets/wide.css">
+        <link rel="stylesheet"
+              type="text/css"
+              media="only screen and (max-width: 480px)"
+              href="/stylesheets/smartphone.css">
     </head>
     <body>
        <div id="page-wrap">
@@ -19,7 +27,7 @@
                <%- body %>
            </section>
            <footer class="main" id="f1">
-               <a href="htttp://es.wikipedia.org/wiki/Quiz">
+               <a href="http://es.wikipedia.org/wiki/Quiz">
                    ¿Qué es un Quiz?</a>
            </footer>
         </div>
