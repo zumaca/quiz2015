@@ -17,8 +17,8 @@ var Sequelize = require('sequelize');
 //Usar sqllite
 var sequelize = new Sequelize(DB_name, user, pwd,
                 {
-                    dialect: protocol , 
-                    storage: protocol,
+                    dialect: protocol, 
+                    protocol: protocol,
                     port:    port,
                     host:    host,
                     storage: storage,
@@ -35,8 +35,8 @@ sequelize.sync().then(function() {
     Quiz.count().then(function(count){
         if(count === 0) {
             Quiz.create({
-                pregunta: 'Capital de eSPAÑA',
-                respuesta: 'Petrel'
+                pregunta: 'Capital de Italia',
+                respuesta: 'Roma'
             })
                     .then(function(){console.log('La base de datos ha sido creada')});
         };
