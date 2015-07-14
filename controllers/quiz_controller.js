@@ -41,4 +41,14 @@ exports.answer = function(req, res) {
     } 
     res.render('quizes/answer', {quiz: req.quiz, respuesta: resultado});
     };
-    
+ 
+// GET /quizes/buscar
+exports.busqueda = function(req, res) {
+    res.render('quizes/buscar');
+};
+
+//GET /quizes/buscar preguntas search
+exports.search = function(req, res) {
+    var busqueda = req.query.search;
+    res.render('quizes/search', {busqueda: busqueda});
+};
