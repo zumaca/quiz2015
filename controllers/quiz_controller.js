@@ -54,7 +54,7 @@ exports.search = function(req, res) {
     models.Quiz.findAll({where: ["pregunta like ?", "%"+ busqueda +"%"] , 
         order: [['pregunta','asc']]}).then(function(results) {
         
-        res.render('quizes/search', {results: results});
+        res.render('quizes/listado', {results: results});
         
     });
     
