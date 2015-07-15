@@ -49,6 +49,11 @@ exports.busqueda = function(req, res) {
 
 //GET /quizes/buscar preguntas search
 exports.search = function(req, res) {
-    var busqueda = req.query.search;
-    res.render('quizes/search', {busqueda: busqueda});
+    var blancos = req.query.search;
+    var busqueda = blancos.split(" ").join("%");
+    models.Quiz.findAll({where: ["pregunta like ?", "%"+ blancos +"%"]}).then(function(results) {
+        res.render('quizes/search', {results: results});
+        
+    });
+    
 };
