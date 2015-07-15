@@ -51,7 +51,9 @@ exports.busqueda = function(req, res) {
 exports.search = function(req, res) {
     var blancos = req.query.search;
     var busqueda = blancos.split(" ").join("%");
-    models.Quiz.findAll({where: ["pregunta like ?", "%"+ blancos +"%"]}).then(function(results) {
+    models.Quiz.findAll({where: ["pregunta like ?", "%"+ busqueda +"%"] , 
+        order: [['pregunta','asc']]}).then(function(results) {
+        
         res.render('quizes/search', {results: results});
         
     });

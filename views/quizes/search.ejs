@@ -1,7 +1,9 @@
         <body>
         <table>
+            El resultado de la búsqueda es: <p>
+           
             <% var i; for (i=0; i<results.length; i++) { %>
-            <tr><td><a href="quizes/<%= results[i].id %>"><%= results[i].pregunta %></a></td></tr>
+            <tr><td><%= results[i].pregunta %></td></tr>
         <% } %>       
         </table>
         </body>
