@@ -1,7 +1,7 @@
 
 var path = require('path');
 
-//POTSGRES DATABASE_URL=  postgres://kqlphqyoyxozrb:kpvXSTkyLJgF8nx6W0rEmoZRG8@ec2-54-83-20-177.compute-1.amazonaws.com:5432/dfgd4qipt7hml2
+//POTSGRES DATABASE_URL=   postgres://jjkdpwfqesaiuj:lijnQFQ_ITg11Fis_NxP4F2k5W@ec2-54-83-20-177.compute-1.amazonaws.com:5432/d38ur2gqar7u4p
 
 //LOCAL DATABASE_URL = sqlite://:@:/
 var url = process.env.DATABASE_URL.match(/(.*)\:\/\/(.*?)\:(.*)@(.*)\:(.*)\/(.*)/);
