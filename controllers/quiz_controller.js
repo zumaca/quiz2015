@@ -44,7 +44,7 @@ exports.answer = function(req, res) {
  
 // GET /quizes/buscar
 exports.busqueda = function(req, res) {
-    res.render('quizes/buscar');
+    res.render('quizes/buscar',{ errors: []} );
 };
 
 //GET /quizes/buscar preguntas search
@@ -75,7 +75,7 @@ exports.create = function(req, res) {
             res.render('quizes/new', {quiz: quiz, errors: err.errors});
         }else{
             quiz.save({fields: ["pregunta", "respuesta","tema"]}).then(function(){
-            res.redirect('/quizes')})
+            res.redirect('/quizes'), { errors: []}})
             }
         }
     );
